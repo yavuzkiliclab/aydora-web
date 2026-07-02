@@ -488,6 +488,13 @@
     .silent{padding:24px 22px}
     .wrap{padding:0 20px}
   }
+  .salesbar{display:none}
+  @media(max-width:920px){
+    .salesbar{display:flex;align-items:center;justify-content:space-between;gap:10px;position:fixed;bottom:0;left:0;right:0;z-index:80;background:#0C2340;border-top:1px solid var(--gold,#C9A44C);padding:10px 16px calc(10px + env(safe-area-inset-bottom));}
+    .salesbar span{color:#C6D2E0;font-size:13px}
+    .salesbar a{background:var(--gold,#C9A44C);color:#0C2340;font-weight:700;font-size:13.5px;padding:9px 14px;border-radius:9px;text-decoration:none;white-space:nowrap}
+    body{padding-bottom:64px}
+  }
 </style>
 </head>
 <body>
@@ -1327,5 +1334,6 @@ const playIO=new IntersectionObserver((es)=>{
 },{threshold:.35});
 playIO.observe(document.getElementById('s-chat'));
 </script>
+<div class="salesbar"><span>Kliniğinize kurulum için</span><a href="https://wa.me/905324847785?text=Aydora%27y%C4%B1%20klini%C4%9Fimde%20kurmak%20i%C3%A7in%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum">Görüşme talep et</a></div>
 </body>
 </html>
